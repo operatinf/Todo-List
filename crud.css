@@ -1,0 +1,218 @@
+/* CSS for create.php , read.php , update.php */
+
+body {
+    margin: 0;
+    height: 100svh;
+
+    display: grid;
+    place-items: center;
+    overflow-y: hidden;
+
+    background-image: url("https://wallpapersmug.com/download/1366x768/d530ea/low-poly-traingular-surface.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#container {
+    display: grid;
+    justify-items: center;
+    grid-template-rows: auto 1fr auto;
+    gap: .8rem;
+
+    width: 424px;
+    height: 80svh;
+    padding: 1rem 1rem;
+
+    box-shadow: 0 0 .5rem black;
+    border-radius: 10px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    background-color: rgba(255, 255, 255, .15);
+    color: azure;
+}
+
+#container::-webkit-scrollbar {
+    width: .5rem;
+}
+
+#container::-webkit-scrollbar-track {
+    border-radius: 4rem;
+    background: rgba(0, 0, 0, .15);
+}
+
+#container::-webkit-scrollbar-thumb {
+    border-radius: 4rem;
+    background: rgba(0, 0, 0, .25);
+}
+
+#container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, .45);
+}
+
+.todo-text,
+.todo-comments,
+.todo-date {
+    width: 24em;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
+
+    user-select: none;
+    word-wrap: break-word;
+
+    background: rgba(0, 0, 0, .65);
+}
+
+div .task-crud {
+    margin-top: 1rem;
+}
+
+.has-submit {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-crud {
+    margin: 0 .35rem;
+    padding: .15rem .5rem;
+    border: 1px solid azure;
+    border-radius: 2rem;
+    outline: none;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    filter: opacity(0.8);
+    background: rgba(0, 0, 0, .65);
+}
+
+.submit {
+    margin-top: 1rem;
+    margin-right: .35rem;
+    width: 10em;
+    padding: .15rem .5rem;
+    border: 1px solid azure;
+    border-radius: 2rem;
+    outline: none;
+
+    filter: opacity(0.8);
+    background: rgba(0, 0, 0, .65);
+
+    color: azure;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.task-crud:hover,
+.task-crud:focus,
+.submit:hover,
+.submit:focus {
+    filter: opacity(1);
+    background: rgba(0, 0, 0, .35);
+    outline: none;
+    border: 1px solid azure;
+}
+
+.task-crud:active,
+.submit:active {
+    filter: opacity(.65);
+}
+
+#new-todo {
+    height: 50%;
+    display: grid;
+    justify-items: center;
+    gap: .8rem;
+}
+
+.todo-form {
+    width: 24em;
+    padding: .8rem 1.2rem;
+    border-radius: .5rem;
+    
+    display: grid;
+    gap: .5rem;
+
+    background: rgba(0, 0, 0, .65);
+}
+
+#todo,
+#comments {
+    background: transparent;
+    border: none;
+    border-radius: .5rem;
+    padding: .8rem .5rem;
+    resize: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    color: azure;
+}
+
+#todo:hover,
+#todo:focus,
+#comments:hover,
+#comments:focus {
+    background: rgba(255, 255, 255, .05);
+}
+
+
+#comments {
+    height: 32rem;
+}
+
+#comments::-webkit-scrollbar {
+    width: .5rem;
+}
+
+#comments::-webkit-scrollbar-track {
+    border-radius: 4rem;
+    background: rgba(255, 255, 255, .15);
+}
+
+#comments::-webkit-scrollbar-thumb {
+    border-radius: 4rem;
+    background: rgba(255, 255, 255, .25);
+}
+
+#comments::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, .45);
+}
+
+span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: azure;
+    font-weight: 200;
+}
+
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    color: azure;
+    margin-block: .2rem;
+}
+
+label {
+    color: azure;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+#blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+}
